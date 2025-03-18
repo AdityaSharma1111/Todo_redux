@@ -11,7 +11,7 @@ function TodoList() {
         if (savedTodos.length > 0) {
             dispatch(setTodos(savedTodos)); // ✅ Dispatch action to update Redux store
         }
-    }, [dispatch]);
+    }, []);
     
     useEffect(() => { // useEffect to save todos to localStorage
     localStorage.setItem("todos", JSON.stringify(todos))
